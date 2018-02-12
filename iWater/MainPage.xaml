@@ -3,7 +3,8 @@
     xmlns="http://xamarin.com/schemas/2014/forms" 
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
     x:Class="iWater.MainPage"
-    BackgroundColor="Teal">
+    BackgroundColor="Teal"
+    NavigationPage.HasNavigationBar="False" >
     	<ContentPage.Content>
             <ListView x:Name="conlist" SeparatorColor="White"
                     ItemSelected="onItemSelected">
