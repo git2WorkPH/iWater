@@ -6,13 +6,12 @@
     BackgroundColor="Teal"
     NavigationPage.HasNavigationBar="False" >
     	<ContentPage.Content>
-            <ListView x:Name="conlist" SeparatorColor="White"
-                    ItemSelected="onItemSelected">
-                <ListView.ItemTemplate>
-                    <DataTemplate>
-                         <TextCell Text="{Binding ownername}" Detail="{Binding serialno}" TextColor="White" />
-                    </DataTemplate>
-                </ListView.ItemTemplate>
-            </ListView>
-    	</ContentPage.Content>  
+               <ListView x:Name="conlist" SeparatorColor="White" ItemSelected="onItemSelected">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                             <TextCell Text="{Binding ownername}" Detail="{Binding serialno}" TextColor="White" />
+                        </DataTemplate>
+                   </ListView.ItemTemplate>
+               </ListView>
+        </ContentPage.Content>  
 </ContentPage>
