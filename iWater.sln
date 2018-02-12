@@ -1,0 +1,23 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "iWater", "iWater\iWater.csproj", "{FE1212AD-6752-446A-93C6-BE9C17F4BD4A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "iWater.Droid", "Droid\iWater.Droid.csproj", "{FE8BC3CC-3979-438F-A92B-516248C7CE00}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FE1212AD-6752-446A-93C6-BE9C17F4BD4A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FE1212AD-6752-446A-93C6-BE9C17F4BD4A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FE1212AD-6752-446A-93C6-BE9C17F4BD4A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FE1212AD-6752-446A-93C6-BE9C17F4BD4A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FE8BC3CC-3979-438F-A92B-516248C7CE00}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FE8BC3CC-3979-438F-A92B-516248C7CE00}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FE8BC3CC-3979-438F-A92B-516248C7CE00}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FE8BC3CC-3979-438F-A92B-516248C7CE00}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

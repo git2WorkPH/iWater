@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ContentPage  
+    BackgroundColor="Teal"
+    xmlns="http://xamarin.com/schemas/2014/forms" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+    xmlns:local="clr-namespace:iWater" 
+    x:Class="iWater.iWaterPage"
+    Padding="0">
+
+    <StackLayout Orientation="Vertical"
+        HorizontalOptions="FillAndExpand"
+        Margin="10,0,0,0">
+        
+        <Label Text="Meter No."  TextColor="Black" />
+        <Label Text="{Binding serialno}" x:Name="lbl_serialno"/>
+        <Label Text="Name:" TextColor="Black"/> 
+        <Label Text="{Binding ownername}" x:Name="lbl_name" />
+        <Label  Text="Previous Reading" TextColor="Black"/>
+        <Label Text="{Binding prevreadingvalue}" x:Name="lbl_prevValue" FontAttributes="Bold"/>
+        <Label Text="Reading Date:" x:Name="lbl_date" TextColor="Black"/> 
+        <DatePicker x:Name="readingdate" MinimumDate="1/1/1900" MaximumDate="1/1/9999" TextColor="White"/>
+        <Label Text="Current Reading" TextColor="Black" />
+        <Editor x:Name="readingValue" Keyboard="Numeric" />
+        <StackLayout
+            HorizontalOptions="CenterAndExpand"
+            Orientation="Horizontal" >
+            <Button x:Name="saveReading" Text="Save" Clicked="OnSave" />
+            <Button x:Name="printBill" Text="Print" />
+            <Button x:Name="btn_back" Text="Back" Clicked="Handle_Clicked" />
+         </StackLayout>
+    </StackLayout>
+    
+</ContentPage>

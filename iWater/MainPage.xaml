@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage 
+    xmlns="http://xamarin.com/schemas/2014/forms" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+    x:Class="iWater.MainPage"
+    BackgroundColor="Teal"
+    Padding="0">
+    	<ContentPage.Content>
+            <ListView x:Name="conlist" SeparatorColor="White"
+                    ItemSelected="onItemSelected">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                         <TextCell Text="{Binding ownername}" Detail="{Binding serialno}" TextColor="White" />
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+    	</ContentPage.Content>  
+</ContentPage>
