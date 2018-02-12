@@ -13,6 +13,7 @@ namespace iWater
         {
             InitializeComponent();
             _connection = DependencyService.Get<ISQLiteDb>().GetConnection();
+           
         }
     
         public iWaterPage(List<consumerDetails> list): this()
