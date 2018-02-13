@@ -38,11 +38,11 @@ namespace iWater
             // pass the specific consumer data for reading, don't pass everything in the list.
             var data = e.SelectedItem as WMSYNC;
             var details = new List<consumerDetails>(){
-                new consumerDetails{wmrid = data.wmr_id, serialno = data.serialno, ownername = data.ownername, prevreadingvalue = data.prevreadingvalue }
+                new consumerDetails{wmrid = data.wmr_id, wmwcid = data.wmwc_id, serialno = data.serialno, ownername = data.ownername, prevreadingvalue = data.prevreadingvalue }
             };
             //detail.BindingContext = details;
             //await DisplayAlert("name", name.ownername, "ok");
-            await Navigation.PushAsync(new NavigationPage(new iWaterPage(details) ));
+            await Navigation.PushAsync(new iWaterPage(details));
         }
     }
 }

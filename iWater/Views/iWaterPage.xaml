@@ -24,9 +24,9 @@
         <StackLayout
             HorizontalOptions="CenterAndExpand"
             Orientation="Horizontal" >
-            <Button x:Name="saveReading" Text="Save" Clicked="OnSave" />
-            <Button x:Name="printBill" Text="Print" />
-            <Button x:Name="btn_back" Text="Back" Clicked="Handle_Clicked" />
+            <Button x:Name="saveReading" Text="Save" Clicked="OnSave" BorderRadius="50" />
+            <Button x:Name="printBill" Text="Print" BorderRadius="50"/>
+            <Button x:Name="btn_back" Text="Back" Clicked="BackButton_Click" BorderRadius="50"/>
          </StackLayout>
     </StackLayout>
     

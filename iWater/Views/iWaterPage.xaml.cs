@@ -2,18 +2,20 @@
 using iWater.Persistence;
 using SQLite;
 using Xamarin.Forms;
+using System;
 
 namespace iWater
 {
     public partial class iWaterPage : ContentPage
     {
-        private SQLiteAsyncConnection _connection;
+        SQLiteAsyncConnection _connection;
+        string wmrID;
+        string wmwcID;
 
         public iWaterPage( )
         {
             InitializeComponent();
             _connection = DependencyService.Get<ISQLiteDb>().GetConnection();
-
         }
     
 
@@ -22,10 +24,18 @@ namespace iWater
             //set the data in the reading screen...
             foreach (var data in list)
             {
+                wmrID = data.wmrid;
+                wmwcID = data.wmwcid;
                 lbl_serialno.Text = data.serialno;
                 lbl_name.Text = data.ownername;
                 lbl_prevValue.Text = data.prevreadingvalue.ToString();
             }
+        }
+
+        protected override async void OnAppearing(){
+            await _connection.CreateTableAsync<WMSYNC>();
+            NavigationPage.SetHasBackButton(this,false);
+            base.OnAppearing();
         }
 
         protected override bool OnBackButtonPressed()
@@ -37,13 +47,15 @@ namespace iWater
         {
             double readVal = 0;
             double.TryParse(readingValue.Text,out readVal);
-            var readingdata = new consumerDetails { readingdate = readingdate.Date, readingvalue =  readVal};
+           
+            var readingdata = new WMSYNC { wmwc_id = wmwcID , wmr_id = wmrID, readingdate = readingdate.Date, readingvalue =  readVal};
 
             await _connection.UpdateAsync(readingdata);
+            //await DisplayAlert("Save Reading","Done","Ok");
             await Navigation.PopAsync();
         }
 
-        async void Handle_Clicked(object sender, System.EventArgs e)
+        async void BackButton_Click(object sender, EventArgs e)
         {
             await Navigation.PopAsync();
         }
